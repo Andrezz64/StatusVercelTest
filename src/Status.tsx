@@ -17,7 +17,7 @@ export function Status (props: propsType) {
         const text = "Online"
         return(
              
-             <div className="mb-4 text-white flex place-content-between w-[25rem]">
+             <div className="mb-4 text-white flex place-content-between w-[20rem] sm:w-[25]">
                 <h1>{props.service}</h1> <p className={color}>{text} <CheckCircle size={20} className="inline mb-0.5"/></p>
             </div>
             
@@ -27,7 +27,7 @@ export function Status (props: propsType) {
         const color = 'text-red-600'
         const text = "Offline"
         return(
-            <div className="mb-4 text-white flex place-content-between w-[25rem]">
+            <div className="mb-4 text-white flex place-content-between  w-[20rem] sm:w-[25]">
                 <h1>{props.service}</h1> <p className={color}>{text} <XCircle size={20} className="inline mb-0.5"/></p>
             </div>
         )
@@ -36,7 +36,7 @@ export function Status (props: propsType) {
         const color = 'text-orange-600'
         const text = "Instabilidade"
         return(
-            <div className="mb-4 text-white flex place-content-between w-[25rem]">
+            <div className="mb-4 text-white flex place-content-between  w-[20rem] sm:w-[25]">
                 <h1>{props.service}</h1> <p className={color}>{text} <WarningCircle size={20} className="inline mb-0.5"/></p>
             </div>
         )
@@ -45,7 +45,7 @@ export function Status (props: propsType) {
         const color = 'text-sky-500'
         const text = "Em manutenção"
         return(
-            <div className="mb-4 text-white flex place-content-between w-[25rem]">
+            <div className="mb-4 text-white flex place-content-between  w-[20rem] sm:w-[25]">
                 <h1>{props.service}</h1> <p className={color}>{text} <ClockClockwise size={20} className="inline mb-0.5"/></p>
             </div>
         )

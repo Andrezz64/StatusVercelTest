@@ -11,7 +11,7 @@ function App() {
     title: string;
     Status: object;
 }
-const [state, setState] = useState<IProducts[]>([])
+
 
 
 function getquery () {
@@ -38,7 +38,7 @@ return(
   <div>
     <Header/>
     <div className="flex items-center justify-center">
-    <div className="bg-define-black w-[30rem]  flex justify-center flex-col items-center rounded-md pb-2">
+    <div className="bg-define-black w-[22rem] sm:w-[30rem]  flex justify-center flex-col items-center rounded-md pb-2">
             
             <header className="text-white mt-4 mb- border-b-2 border-zinc-500">Status de Serviço</header>
             
