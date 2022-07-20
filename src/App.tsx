@@ -12,7 +12,7 @@ function App() {
     Status: object;
 }
 
-
+const [state, setState] = useState([])
 
 function getquery () {
 const { loading, error, data } = useQuery(SERVICE_STATUS,
