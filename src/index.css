@@ -14,5 +14,13 @@ body {
     *{
         font-size: 1.5rem;
     }
+
 }
 
+@media all and (display-mode: fullscreen) {
+    section{
+        
+        visibility: hidden;
+        }
+    
+  }
