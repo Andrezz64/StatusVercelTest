@@ -1,16 +1,22 @@
 import { useQuery } from "@apollo/client"
 import { Header } from "./Header"
 import { Status } from "./Status"
-import SERVICE_STATUS from "./querys/index.js"
 import React, { useState, useEffect } from 'react'
 import { ReactDOM } from "react"
+import { gql } from "@apollo/client";
+
+const SERVICE_STATUS = gql`
+    query data{
+    alterdata_Services{
+      serviceName
+      state
+      id
+    }
+  }
+  `
 function App() {
 
-  interface IProducts {
-    id: number;
-    title: string;
-    Status: object;
-}
+
 
 const [state, setState] = useState([])
 
@@ -26,9 +32,9 @@ if (error) return `Error! ${error}`
 
 return (
   
-  data.alterdata_Services.map(data => {
+  data.alterdata_Services.map((data: { serviceName: string; state: string; id: React.Key | null | undefined }) => {
     return (
-     <Status service={data.serviceName} status={data.state} key={data.id}/>
+     <Status service={data.serviceName} status={data.state} key={data.id} data={Object}/>
     )
   })
 )
